@@ -7,6 +7,8 @@ package MainTests;
 
 import org.testng.annotations.Test;
 
+import com.beust.testng.TestNG;
+
 import Pages.EntitiesPage;
 import Pages.HomePage;
 import Pages.LogIn;
@@ -25,14 +27,24 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
+import org.testng.TestListenerAdapter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 
 public class TestCase1 {
 	WebDriver driver;
-	//Main Test
+	@SuppressWarnings("deprecation")
+	
+	public static void main(String[] args){
+		TestListenerAdapter tla = new TestListenerAdapter();
+		TestNG testng = new TestNG();
+		testng.setTestClasses(new Class[] { TestCase1.class });
+		testng.addListener(tla);
+		testng.run();
+	}
+//Main Test
   @Test
-  public void MainTestCase1() throws InterruptedException {
+  public void main() throws InterruptedException {
 	  //Page Object Model
 	  LogIn login = new LogIn(driver);
 	  HomePage homepage = new HomePage(driver);
@@ -55,6 +67,7 @@ public class TestCase1 {
 	  entitiespage.CreateDerivative("Test1", "Common");
 	  entitiespage.ClickSaveBtn();
 	  entitiespage.ValidateDerivative("Test1");
+	  entitiespage.DeleteDerivative("Test1");
 	  logout.ClickLogOutLink();
   }
   
@@ -68,7 +81,6 @@ public class TestCase1 {
 		 driver.get("https://ptrp-ux-ctadmin.ctadvantage.com/");
 		 
   }
-
   @AfterTest
   public void afterTest() {
 	  driver.close();
