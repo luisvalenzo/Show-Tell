@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="32120" started-at="2017-05-23T19:35:23Z" finished-at="2017-05-23T19:35:56Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="32120" started-at="2017-05-23T19:35:23Z" finished-at="2017-05-23T19:35:56Z">
+      <class name="MainTests.TestCase1">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:MainTests.TestCase1@4c70fda8]" name="beforeTest" is-config="true" duration-ms="8776" started-at="2017-05-23T14:35:23Z" finished-at="2017-05-23T14:35:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="MainTestCase1()[pri:0, instance:MainTests.TestCase1@4c70fda8]" name="MainTestCase1" duration-ms="20991" started-at="2017-05-23T14:35:32Z" finished-at="2017-05-23T14:35:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MainTestCase1 -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:MainTests.TestCase1@4c70fda8]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2017-05-23T14:35:53Z" finished-at="2017-05-23T14:35:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MainTestCase1 status=SUCCESS method=TestCase1.MainTestCase1()[pri:0, instance:MainTests.TestCase1@4c70fda8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:MainTests.TestCase1@4c70fda8]" name="afterTest" is-config="true" duration-ms="2336" started-at="2017-05-23T14:35:53Z" finished-at="2017-05-23T14:35:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- MainTests.TestCase1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
