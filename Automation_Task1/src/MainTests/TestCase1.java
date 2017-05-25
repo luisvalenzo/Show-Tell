@@ -31,10 +31,9 @@ import org.testng.TestListenerAdapter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 
+@SuppressWarnings("deprecation")
 public class TestCase1 {
-	WebDriver driver;
-	@SuppressWarnings("deprecation")
-	
+	private WebDriver driver;
 	public static void main(String[] args){
 		TestListenerAdapter tla = new TestListenerAdapter();
 		TestNG testng = new TestNG();
@@ -74,7 +73,7 @@ public class TestCase1 {
   //Script Settings
   @BeforeTest
   public void beforeTest() {
-	  System.setProperty("webdriver.chrome.driver", "C:\\Users\\U56996\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
 		 driver = new ChromeDriver();
 		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		 driver.manage().window().maximize();
@@ -92,7 +91,7 @@ public class TestCase1 {
   public void takeScreenShotOnFailure(ITestResult testResult) throws IOException { 
   	if (testResult.getStatus() == ITestResult.FAILURE) { 
   		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 
-  		FileUtils.copyFile(scrFile, new File("D:\\errorScreenshots\\" + testResult.getName() + "-" 
+  		FileUtils.copyFile(scrFile, new File("C:\\errorScreenshots\\" + testResult.getName() + "-" 
   				+ Arrays.toString(testResult.getParameters()) +  ".jpg"));
   	} 
   }
