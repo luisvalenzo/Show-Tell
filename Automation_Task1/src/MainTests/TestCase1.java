@@ -2,7 +2,7 @@ package MainTests;
 /* Automation Testing PDI
  * Based on TestNG and Page Object model framework
  * Objective: Verifies the Derivative creation of an Entity is successful
- * QA Automation: Jose Luis Diaz Valenzo
+ * QA Automation: Jose Valenzo
  * */
 
 import org.testng.annotations.Test;
@@ -51,7 +51,7 @@ public class TestCase1 {
 	  LogOut logout = new LogOut(driver);
 	  //Automated Test Case
 	  System.out.println("Step 1. Login into the application and navigating to the Entity List page by searching an Entity in the Quick Search text box");
-	  login.EnterCredentials("qaautomation1", "2apples");
+	  login.EnterCredentials("", "");
 	  System.out.println("Step 2. Click on the Entity name link and navigate to the Entity overview page");
 	  homepage.SelectAllEntities();
 	  entitiespage.ClickEntity();
@@ -77,7 +77,7 @@ public class TestCase1 {
 		 driver = new ChromeDriver();
 		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		 driver.manage().window().maximize();
-		 driver.get("https://ptrp-ux-ctadmin.ctadvantage.com/");
+		 driver.get("");
 		 
   }
   @AfterTest
