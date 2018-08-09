@@ -28,7 +28,7 @@ public class TestCase2 {
 	  LogOut logout = new LogOut(driver);
 	  
 	  //
-	  login.EnterCredentials("qaautomation1", "2apples");
+	  login.EnterCredentials("", "");
 	  
 	  homepage.SelectAllEntities();
 	  entitiespage.ClickEntity();
@@ -39,11 +39,11 @@ public class TestCase2 {
   }
   @BeforeTest
   public void beforeTest() {
-	  System.setProperty("webdriver.chrome.driver", "C:\\Users\\U56996\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver", "");
 		 driver = new ChromeDriver();
 		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		 driver.manage().window().maximize();
-		 driver.get("https://ptrp-ux-ctadmin.ctadvantage.com/");
+		 driver.get("");
 		 
   }
 
